@@ -7,12 +7,13 @@ import About from "./About";
 import user from "../data/user";
 console.log(user);
 
-function App() {
+function App(){
+  const { name, city, bio,links} = user;
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home name={name} city={city} />
+      <About bio={bio} github={links.github} linkedin={links.linkedin}/>
     </div>
   );
 }
